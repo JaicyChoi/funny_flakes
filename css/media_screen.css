@@ -8,9 +8,13 @@
     .group2_wrapper{
         width: 100%;
     }
-    .combo_wrapper li{
-        margin-right: 20px;
+    .combo_wrapper{
+        left: 5%;
+        justify-content: space-evenly;
     }
+/*     .combo_wrapper li{
+        margin-right: 20px;
+    } */
     .group3_wrapper{
         width: 100%;
     }
@@ -27,9 +31,6 @@
     }
     .menu_box, .check_box{
         width: 90%;
-    }
-    .group2_wrapper{
-        width: 100%;
     }
     .combo_wrapper{
         justify-content: space-between;
@@ -189,6 +190,10 @@
         width: 140px;
         height: 47px;
     } */
+    }
+    .combo_wrapper{
+        left: 10%;
+    }
     .group3_title{
         margin-bottom: 35px;
     }
