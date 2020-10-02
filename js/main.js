@@ -20,4 +20,8 @@ combo_swiper = new Swiper('.group2_wrapper', {
     GrabCursor: true
 });
 
-document.querySelectorAll('.swiper-slide')[2].style.marginRight = 0;
+document.querySelectorAll('.swiper-slide')[2].style.marginRight = '0';
+
+window.addEventListener('resize', function(){
+    document.querySelectorAll('.swiper-slide')[2].style.marginRight = '0';
+});

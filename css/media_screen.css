@@ -28,6 +28,12 @@
     .menu_box, .check_box{
         width: 90%;
     }
+    .group2_wrapper{
+        width: 100%;
+    }
+    .combo_wrapper{
+        justify-content: space-between;
+    }
 /*     .combo_wrapper{
         display: flex;
         flex-direction: column;

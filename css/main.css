@@ -517,7 +517,7 @@ svg{
     float: left;
     width: 100%;
     padding-top: 85px;
-    padding-bottom: 125px;
+    padding-bottom: 110px;
     font-family: 'Poppins', sans-serif;
     background-color: #a8baca;
 }
@@ -527,6 +527,8 @@ svg{
     width: 1200px;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
+    padding-bottom: 15px;
 }
 .group2_text{
     position: relative;
