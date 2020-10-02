@@ -464,6 +464,7 @@ svg{
 }
 .add_cart{
     position: relative;
+    display: block;
     left: 50%;
     transform: translateX(-50%);
     width: 270px;
