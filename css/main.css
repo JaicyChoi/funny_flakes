@@ -9,6 +9,9 @@ body{
     color: #1d4c8b;
     background-color: #fff8ee;
 }
+body.scroll_lock{
+    overflow: hidden;   
+}
 header{
     position: relative;
     width: 100%;
@@ -79,6 +82,7 @@ nav{
     text-decoration: none;
     color: #1d4c8b;
     display: block;
+    cursor: pointer;
 }
 .cart{
     position: absolute;
@@ -87,7 +91,7 @@ nav{
 }
 .cart_icon{
     position: relative;
-    right: 23px;
+    right: 16px;
     width: 40px;
     height: 37px;
     background: url(../images/cart.png) no-repeat center;
@@ -105,6 +109,7 @@ nav{
 }
 .cart_menu{
     position: absolute;
+    font-family: 'Poppins', sans-serif;
     margin-top: 5px;
     right: 5px;
     background-color: white;
@@ -112,13 +117,17 @@ nav{
     font-size: 0.95em;
     text-align: center;
     display: none;
-    padding: 0 5px;
+    padding: 0 6px;
 }
 .cart_menu.show{
     display: block;
 }
 .cart_menu li{
     position: relative;
+    width: 70px;
+}
+.cart_menu li:first-child{
+    margin-top: 3px;
 }
 .cart_menu li:last-child{
     margin-bottom: 5px;
@@ -147,6 +156,7 @@ nav{
     height: 35px;
     background: url(../images/mobile_menu.png) no-repeat center;
     background-size: contain;
+    cursor: pointer;
     display: none;
 }
 .mobile_menu_wrapper{
@@ -154,11 +164,13 @@ nav{
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, .75);
-    z-index: 1;
-    display: none;
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s ease;
 }
 .mobile_menu_wrapper.show{
-    display: block;
+    opacity: 1;
+    z-index: 1;
 }
 .mobile_menu{
     position: relative;
@@ -168,9 +180,20 @@ nav{
     display: flex;
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
-    padding-top: 50px;
+    padding-top: 55px;
     transition: all .5s ease;
+    transition-delay: .3s;
     transform: translateX(-100%);
+}
+.moblie_menu_close{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 20px;
+    height: 20px;
+    background: url(../images/close_icon.png) no-repeat center;
+    background-size: contain;
+    cursor: pointer;
 }
 .mobile_menu.show{
     transform: translateX(0);
@@ -236,10 +259,10 @@ svg{
     position: absolute;
     top: 0;
 }
-.svg_right {
+.svg_right{
     fill: transparent;
     stroke: #f5d1c9;
-    stroke-width: 2px;
+    stroke-width: 3.5px;
     opacity: 1;
     top: -2px;
     right: 0;
@@ -249,10 +272,19 @@ svg{
 .svg_left {
     fill: transparent;
     stroke: #f5d1c9;
-    stroke-width: 2px;
+    stroke-width: 3.5px;
     width: 60%;
     left: 0;
     top: -70px;
+    z-index: -10;
+}
+.svg_bottom{
+    right: 0;
+    transform: translateY(60%);
+    fill: transparent;
+    stroke: #f5d1c9;
+    stroke-width: 5px;
+    width: 60%;
     z-index: -10;
 }
 .svg_bottom{
@@ -488,7 +520,8 @@ svg{
 .group1_btn{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -520,6 +553,22 @@ svg{
     padding-bottom: 110px;
     font-family: 'Poppins', sans-serif;
     background-color: #a8baca;
+}
+.group2:after{
+    content: 'drag';
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 65px;
+    background: url(../images/drag_icon.png) no-repeat center 20px;
+    background-size: contain;
+    animation: icon_blink 1.7s linear infinite;
+    display: none;
 }
 .group2_wrapper{
     position: relative;
@@ -861,4 +910,54 @@ footer:after{
     bottom: 27px;
     width: 310px;
     text-align: center;
+}
+.top_btn_wrapper{
+    position: fixed;
+    width: 1200px;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    bottom: 25px;
+    transition: all .7s ease;
+    opacity: 0;
+    z-index: 1;
+}
+.top_btn_wrapper.show{
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+.top_btn_wrapper button{
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .75);
+    border-radius: 3px;
+    border: 1px solid rgba(29, 76, 139, .75);
+}
+.top_btn_wrapper button:before{
+    content: 'TOP';
+    font-family: 'Poppins', sans-serif;
+    color: #1d4c8b;
+    position: absolute;
+    top: -20px;
+    font-weight: 600;
+    font-size: 1.05em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.top_btn_wrapper button:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px;
+    background: url(../images/top_icon.png) no-repeat center;
+    background-size: contain;
+}
+.top_btn_wrapper button:focus{
+    outline: none;
 }

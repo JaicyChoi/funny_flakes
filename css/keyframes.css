@@ -62,3 +62,16 @@
     transform: scale(1);
   }
 }
+@keyframes icon_blink{
+    0%{
+        opacity: .5;
+        transform: translateX(calc(-50% + 15px));
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .3;
+        transform: translateX(calc(-50% - 15px));
+    }
+}

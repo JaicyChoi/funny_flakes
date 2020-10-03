@@ -5,6 +5,9 @@
     .group1_wrapper{
         width: 100%;
     }
+    .group1_btn{
+        width: 97%;
+    }
     .group2_wrapper{
         width: 100%;
     }
@@ -24,6 +27,9 @@
     .footer_wrapper{
         width: 100%;
     }
+    .top_btn_wrapper{
+        width: 95%;
+    }
 }
 @media screen and (max-width:980px){
     .group1_menu{
@@ -31,6 +37,9 @@
     }
     .menu_box, .check_box{
         width: 90%;
+    }
+    .svg_left{
+        top: 0;
     }
     .combo_wrapper{
         justify-content: space-between;
@@ -69,6 +78,9 @@
         margin-top: 0;
         font-size: 0.9em;
     } */
+    .group2:after{
+        display: block;
+    }
     .group3_wrapper{
         height: 980px;
     }
@@ -131,6 +143,19 @@
     .group1_wrapper{
         margin-top: 315px;
     }
+    .svg_left {
+        stroke-width: 5px;
+    }
+    .svg_right{
+        stroke-width: 5px;
+    }
+    .svg_bottom{
+        top: 290px;
+        transform: translateY(50%);
+    }
+    .group1_menu{
+        width: 85%;
+    }
     .group1_menu_text{
         width: 90%;
     }
@@ -141,7 +166,7 @@
         transform: translateX(-50%);
     }
     .check_list{
-        width: 70%;
+        width: 80%;
     }
     .check_list:first-child{
         margin-bottom: 25px;
@@ -159,7 +184,7 @@
         margin-bottom: 15px;
     }
     .yoghourt_checkbox{
-        width: 70%;
+        width: 80%;
         left: 50%;
         transform: translateX(-50%);
         flex-direction: column;
@@ -190,7 +215,6 @@
         width: 140px;
         height: 47px;
     } */
-    }
     .combo_wrapper{
         left: 10%;
     }
@@ -262,6 +286,10 @@
         height: 55px;
         margin-top: 30px;
     }
+    .group2:after{
+        width: 33px;
+        height: 53px;
+    }
     .group3_title{
         margin-bottom: 30px;
     }
@@ -323,18 +351,28 @@
         height: 300px;
         bottom: calc(-300px/2);
     }
+    .mobile_menu{
+        width: 40%;
+    }
     .mobile_menu_icon{
         top: 55px;
         width: 30px;
         height: 30px;
     }
+    .moblie_menu_close{
+        width: 18px;
+        height: 18px;
+    }
     .cart{
         top: 60px;
     }
     .cart_icon{
-        right: 25px;
+        right: 16px;
         width: 32px;
         height: 29px;
+    }
+    .cart_menu li{
+        width: 67px;
     }
     .cart_icon:after{
         width: 7px;
@@ -354,7 +392,21 @@
     .group1_wrapper{
         margin-top: 250px;
     }
+    .svg_left {
+        stroke-width: 7px;
+        width: 70%;
+    }
+    .svg_right{
+        stroke-width: 7px;
+         width: 80%
+    }
+    .svg_bottom{
+        width: 100%;
+    }
     .group1_menu{
+        width: 80%;
+    }
+    .group1_menu_text{
         width: 90%;
     }
     .group1_menu_text_title{
@@ -372,10 +424,17 @@
     .yoghourt_checkbox{
         width: 90%;
     }
+    .yoghourt_checkbox li .price{
+        margin-right: 10px;
+    }
     .add_cart{
         width: 230px;
         height: 65px;
         font-size: 1.2em;
+    }
+    .group2:after{
+        width: 31px;
+        height: 51px;
     }
     .group2_title{
         font-size: 2.5em;
@@ -456,9 +515,17 @@
         width: 6px;
         height: 6px;
     }
+    .mobile_menu{
+        width: 50%;
+    }
     .mobile_menu_icon{
         width: 30px;
         height: 30px;
+    }
+    .mobile_menu li{
+        font-size: 1em;
+        text-indent: 20px;
+        margin-bottom: 15px;
     }
     .header_wrapper:after{
         width: 230px;
