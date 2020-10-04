@@ -18,6 +18,28 @@
       width: 120%;
   }
 }
+@keyframes left_arrow_btn{
+  0%, 50%, 100%{
+      transform: scale(1.05);
+  }
+  25%{
+      transform: scale(0.9);
+  }
+  75%{
+      transform: scale(0.8);
+  }
+}
+@keyframes right_arrow_btn{
+  0%, 50%, 100%{
+      transform: scale(1.05) rotate(180deg);
+  }
+  25%{
+      transform: scale(0.9) rotate(180deg);
+  }
+  75%{
+      transform: scale(0.8) rotate(180deg);
+  }
+}
 @keyframes buttonAnimate{
   0%, 50%, 100%{
       transform: translateX(-50%) scale(1);
@@ -28,6 +50,22 @@
   75%{
       transform: translateX(-50%) scale(0.8);
   }
+}
+@keyframes move_left{
+    0%{
+        transform: translateX(15px) rotate(180deg);
+    }
+    100%{
+        transform: translateX(-15px) rotate(180deg);
+    }
+}
+@keyframes move_right{
+    0%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(15px);
+    }
 }
 @keyframes left_animation{
   0%{

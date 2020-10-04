@@ -133,6 +133,9 @@
     .mobile_menu_icon{
         display: block;
     }
+    .mobile_menu_wrapper{
+        display: block;
+    }
     .main_title{
         font-size: 5em;
     }
@@ -352,7 +355,7 @@
         bottom: calc(-300px/2);
     }
     .mobile_menu{
-        width: 40%;
+        width: 45%;
     }
     .mobile_menu_icon{
         top: 55px;
