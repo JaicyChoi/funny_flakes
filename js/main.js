@@ -93,12 +93,11 @@ let move_next = 1;
 
 if( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ){
     isIE = true;
-    // drag_icon.innerHTML = '.group2:after{content: none;}';
+    drag_icon.innerHTML = '.group2:after{content: none;}';
 }
 
 function show_combo_btn(){
-    // if( window.innerWidth <= 980 && isIE === true )
-    if( window.innerWidth <= 980 )
+    if( window.innerWidth <= 980 && isIE === true )
         combo_btn_wrapper.classList.add('show');
     else if( window.innerWidth > 980 )
         combo_btn_wrapper.classList.remove('show');
@@ -108,25 +107,36 @@ show_combo_btn();
 
 window.addEventListener('resize', function(){
     show_combo_btn();
-    if( window.innerWidth >= 1200 )
-        combo_wrapper.style.transform = 'translateX(0)';
+    move_next = 1;
+    combo_wrapper.style.transform = 'translateX(0)';
 });
 
 prev_btn.addEventListener('click', function(){
-
+    if( move_next < 0 ) return;
+    if( window.innerWidth <= 980 ){
+        combo_wrapper.style.transform = 'translateX(0)';
+    }
+    if( window.innerWidth <= 768 && move_next > 0 ){
+        combo_wrapper.style.transform = 'translateX('+ -combo_slide[0].offsetWidth * move_next + 'px)';
+        move_next--;
+    }
+    if( window.innerWidth <= 320 && move_next > 0 ){
+        combo_wrapper.style.transform = 'translateX('+ -combo_slide[0].offsetWidth * move_next + 'px)';
+        move_next--;
+    }
 });
 next_btn.addEventListener('click', function(){
+    if( window.innerWidth > 320 && move_next > 2 ){ move_next = 2; return; }    
     if( window.innerWidth <= 980){
         combo_wrapper.style.transform = 'translateX('+ -combo_slide[0].offsetWidth * move_next + 'px)';
     }
     if( window.innerWidth <= 768 && move_next <= 1 ){
-        console.log(move_next);
-        move_next++;
-        combo_wrapper.style.transform = 'translateX('+ -combo_slide[0].offsetWidth * move_next + 'px)';        
+        combo_wrapper.style.transform = 'translateX('+ -combo_slide[0].offsetWidth * move_next + 'px)';
+        move_next++;        
     }
     if( window.innerWidth <= 320 && move_next <= 2 ){
-        move_next++;
         combo_wrapper.style.transform = 'translateX('+ -combo_slide[0].offsetWidth * move_next + 'px)';
+        move_next++;
     }
 });//work on btn controll
 
