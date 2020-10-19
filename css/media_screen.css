@@ -168,7 +168,7 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    .check_list{
+    .check_list_wrapper{
         width: 80%;
     }
     .check_list:first-child{
@@ -183,13 +183,15 @@
         transform: translateX(50%);
 
     }
-    .yoghourt_checkbox .check_box_title{
+    .yoghourt_checkbox_wrapper .check_box_title{
         margin-bottom: 15px;
     }
-    .yoghourt_checkbox{
+    .yoghourt_checkbox_wrapper{
         width: 80%;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .yoghourt_checkbox{
         flex-direction: column;
     }
     .yoghourt_checkbox li{
@@ -354,7 +356,7 @@
         height: 300px;
         bottom: calc(-300px/2);
     }
-    .mobile_menu{
+    .mobile_menu_wrapper2{
         width: 45%;
     }
     .mobile_menu_icon{
@@ -421,10 +423,10 @@
     .menu_box{
         font-size: 1.5em;
     }
-    .check_list{
+    .check_list_wrapper{
         width: 90%;
     }
-    .yoghourt_checkbox{
+    .yoghourt_checkbox_wrapper{
         width: 90%;
     }
     .yoghourt_checkbox li .price{
@@ -445,7 +447,7 @@
     .group2_description{
         font-size: 1.15em;
     }
-    .history, .these_are{
+    .history_wrapper, .these_are{
         width: 80%;
     }
     .history{
@@ -518,7 +520,7 @@
         width: 6px;
         height: 6px;
     }
-    .mobile_menu{
+    .mobile_menu_wrapper2{
         width: 50%;
     }
     .mobile_menu_icon{
